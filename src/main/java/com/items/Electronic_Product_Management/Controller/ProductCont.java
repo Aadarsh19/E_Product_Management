@@ -34,6 +34,7 @@ public class ProductCont {
 		model.addAttribute("product",product);
 		return "products/CreateProduct" ;
 	}
+	
 	@GetMapping("/delete")
 	public String deleteProduct(@RequestParam int id) {
 		Products product=productRepo.findById(id).get();
